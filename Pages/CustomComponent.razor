@@ -1,0 +1,20 @@
+<div>
+    <h5>Skriv in ditt namn</h5>
+    <input class="form-control" @bind="name" @bind:event="oninput" />
+    <button class="btn btn-primary" @onclick="ShowGreeting">Hälsa på mig!</button>
+
+    @if (!string.IsNullOrEmpty(greetingMessage))
+    {
+        <p class="result">@greetingMessage</p>
+    }
+</div>
+
+@code {
+    private string name = "";
+    private string greetingMessage = "";
+
+    private void ShowGreeting()
+    {
+        greetingMessage = $"Hej, {name}!";
+    }
+}

@@ -30,6 +30,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ29udmVyc2lvbi5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/robertopiranamedi/Desktop/Moment 1.2/Pages/CustomComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ3VzdG9tQ29tcG9uZW50LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/robertopiranamedi/Desktop/Moment 1.2/Pages/Home.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvSG9tZS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
