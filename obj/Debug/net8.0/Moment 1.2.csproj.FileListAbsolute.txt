@@ -1029,3 +1029,4 @@
 /Users/robertopiranamedi/Desktop/Moment 1.2/obj/Debug/net8.0/refint/Moment 1.2.dll
 /Users/robertopiranamedi/Desktop/Moment 1.2/obj/Debug/net8.0/Moment 1.2.pdb
 /Users/robertopiranamedi/Desktop/Moment 1.2/obj/Debug/net8.0/ref/Moment 1.2.dll
+/Users/robertopiranamedi/Desktop/Moment 1.2/obj/Debug/net8.0/Moment 1.2.sourcelink.json
