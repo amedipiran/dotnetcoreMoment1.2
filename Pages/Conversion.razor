@@ -4,7 +4,91 @@
 
 <h1>Konvertering</h1>
 
+<!-- Dropdown för att välja konverteringstyp -->
+<div class="form-group">
+<label for="conversionType">Välj Konvertering: </label>
+<select class=" form-control" @onchange="OnConversionTypeChanged">
+    <option value="meterToFoot">Meter till Fot</option>
+    <option value="footToMeter">Fot till Meter</option>
+    <option value="kmhToMph">Km/h till Miles/h</option>
+    <option value="mphToKmh">Miles/h till Km/h</option>
+</select>
+</div>
 
 
+@if (selectedConversion == "meterToFoot")
+{
+    <!-- Input och knapp för meter till fot konvertering -->
+    <div class="form-group">
+        <label for="input">Meter: </label>
+        <input @bind="inputValue" type="number" min="0" id="input" class="form-control"/>
+        <button class="btn btn-primary" @onclick="ConvertMeterToFoet">Konvertera till Fot</button>
+        <p class="result">Resultat: @conversionResult Fot</p>
+    </div>
+}
+else if (selectedConversion == "footToMeter")
+{
+    <!-- Input och knapp för fot till meter konvertering -->
+    <div class="form-group">
+        <label for="input">Fot: </label>
+    <input @bind="inputValue" type="number" min="0" id="input" class="form-control"/>
+        <button class="btn btn-primary" @onclick="ConvertFootToMeter">Konvertera till Meter</button>
+        <p class="result">Resultat: @conversionResult Meter</p>
+    </div>
+}
+else if (selectedConversion == "kmhToMph")
+{
+    <!-- Input och knapp för km/h till miles/h konvertering -->
+    <div class="form-group">
+        <label for="input">Km/h: </label>
+  <input @bind="inputValue" type="number" min="0" id="input" class="form-control"/>
+        <button class="btn btn-primary" @onclick="ConvertKmhToMph">Konvertera till Miles/h</button>
+        <p class="result">Resultat: @conversionResult Miles/h</p>
+    </div>
+}
+else if (selectedConversion == "mphToKmh")
+{
+    <!-- Input och knapp för miles/h till km/h konvertering -->
+    <div class="form-group">
+        <label for="input">Miles/h: </label>
+  <input @bind="inputValue" type="number" min="0" id="input" class="form-control"/>
+        <button class="btn btn-primary" @onclick="ConvertMphToKmh">Konvertera till Km/h</button>
+        <p class="result">Resultat: @conversionResult Km/h</p>
+    </div>
+}
 
+@code {
+    string selectedConversion = "meterToFoot";
+    double inputValue;
+    string conversionResult = "";
 
+    void OnConversionTypeChanged(ChangeEventArgs e)
+    {
+        selectedConversion = e.Value.ToString();
+        conversionResult = ""; // Rensa tidigare resultat
+    }
+
+    void ConvertMeterToFoet()
+    {
+        double feet = inputValue * 3.28084;
+        conversionResult = feet.ToString("F2"); // Avrundar till två decimaler
+    }
+
+    void ConvertFootToMeter()
+    {
+        double meters = inputValue / 3.28084;
+        conversionResult = meters.ToString("F2");
+    }
+
+    void ConvertKmhToMph()
+    {
+        double mph = inputValue * 0.621371;
+        conversionResult = Math.Round(mph).ToString(); // Avrundar till närmaste heltal
+    }
+
+    void ConvertMphToKmh()
+    {
+        double kmh = inputValue / 0.621371;
+        conversionResult = Math.Round(kmh).ToString();
+    }
+}
