@@ -25,6 +25,10 @@
       "PackagePath": "staticwebassets/css/bootstrap/bootstrap.min.css.map"
     },
     {
+      "Id": "/Users/robertopiranamedi/Desktop/Moment 1.2/wwwroot/data/movies.json",
+      "PackagePath": "staticwebassets/data/movies.json"
+    },
+    {
       "Id": "/Users/robertopiranamedi/Desktop/Moment 1.2/wwwroot/favicon.png",
       "PackagePath": "staticwebassets/favicon.png"
     },

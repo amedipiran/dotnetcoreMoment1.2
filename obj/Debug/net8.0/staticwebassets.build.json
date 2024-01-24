@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ZNs0u6fAVFpE+8oaef67zwyJ3k0i+2KjvUmFnRXttN8=",
+  "Hash": "BTz2SRL8W54ODCdxbheb6Hepc0MjTL+G+it0vu+q4Eo=",
   "Source": "Moment 1.2",
   "BasePath": "/",
   "Mode": "Root",
@@ -7862,6 +7862,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/css/bootstrap/bootstrap.min.css.map"
+    },
+    {
+      "Identity": "/Users/robertopiranamedi/Desktop/Moment 1.2/wwwroot/data/movies.json",
+      "SourceId": "Moment 1.2",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/robertopiranamedi/Desktop/Moment 1.2/wwwroot/",
+      "BasePath": "/",
+      "RelativePath": "data/movies.json",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/data/movies.json"
     },
     {
       "Identity": "/Users/robertopiranamedi/Desktop/Moment 1.2/wwwroot/favicon.png",

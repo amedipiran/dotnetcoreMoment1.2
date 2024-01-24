@@ -1,6 +1,50 @@
 ﻿@page "/json"
 @inject HttpClient Http
 
-<PageTitle>Json</PageTitle>
+<PageTitle>JSON</PageTitle>
 
-<h1>JSON</h1>
+<h1>Top 10 filmer i världen</h1>
+<p>Nedan följer en lista på de 10 bästa filmerna i världen, baserat på IMDB:s betyg.</p>
+
+@if (movies != null)
+{
+    <ol>
+        @foreach (var movie in movies)
+        {
+            <li><strong>
+                @movie.title.
+            </strong></li>
+        }
+    </ol>
+}
+else
+{
+    <p>Laddar filmer...</p>
+}
+
+@code {
+    public class Movie
+{
+    public string title { get; set; }
+
+}
+
+
+    private List<Movie> movies;
+
+protected override async Task OnInitializedAsync()
+{
+    try
+    {
+        var response = await Http.GetStreamAsync("data/movies.json");
+        movies = await System.Text.Json.JsonSerializer.DeserializeAsync<List<Movie>>(response);
+
+
+    }
+    catch (Exception e)
+    {
+        Console.WriteLine($"Ett fel inträffade: {e.Message}");
+    }
+}
+
+}
